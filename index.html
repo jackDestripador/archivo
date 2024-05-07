@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="es_mx">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archivo</title>
+
+        </style>
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
 </head>
 <script>
+
     function mostrarOpciones() {
         var seleccion = document.getElementById("unidadadministartiva").value;
         var opciones = document.getElementById("areaadministrativa");
@@ -77,52 +81,52 @@
     }
 </script>
 
-<body>
-    <div>
 
+        <center>
+        <h1>sistema de archivo</h1>
+        <form action="datos.php" method="POST" enctype="multipart/form-data" class="form-horizontal" class="ceter"  role="form" style="margin:0 auto">
+
+            <label> Unidad administrativa</label>
+            <select id="unidadadministartiva" name="unidadadministartiva" onchange="mostrarOpciones()" required>
+                <option value="DAM"> Dirección de Asesoría y Mediación</option>
+                <option value="DRJ"> Dirección de Representación Jurídica</option>
+                <option value="DZN"> Dirección de Control de Procesos Zona Norte</option>
+                <option value="DZC"> Dirección de Control de Procesos Zona Centro </option>
+                <option value="DZS">Dirección de Control de Procesos Zona Sur </option>
+            </select>
+            <br>
+            <br>
+            <label for="areaadministrativa">Área administrativa </label>
+            <select id="areaadministrativa" name="areaadministrativa" required>
+                <!-- Las opciones serán generadas dinámicamente por JavaScript -->
+
+            </select>
+            <br>
+            <br>
+            <label for="numeroexpedinete">Número de expediente:</label>
+            <input type="number" id="numeroexpedinete" name="numeroexpedinete" min="1" max="999" required />
+            <br>
+            <br>
+            <label for="anoexpediente">Año del expediente:</label>
+            <input type="number" id="anoexpediente" name="anoexpediente" min="2000" max="2024" required />
+            <br>
+            <br>
+
+            <label>Seleccione el archivo a subir:</label>
+
+
+            <input type="file" name="archivo" accept="application/pdf">
+            <br>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+   
   
-    <h1>sistema de archivo</h1>
-    <form action="datos.php" method="POST" enctype="multipart/form-data">
-
-        <label> Unidad administrativa</label>
-        <select id="unidadadministartiva" name="unidadadministartiva" onchange="mostrarOpciones()" required>
-            <option value="DAM"> Dirección de Asesoría y Mediación</option>
-            <option value="DRJ"> Dirección de Representación Jurídica</option>
-            <option value="DZN"> Dirección de Control de Procesos Zona Norte</option>
-            <option value="DZC"> Dirección de Control de Procesos Zona Centro </option>
-            <option value="DZS">Dirección de Control de Procesos Zona Sur </option>
-        </select>
-        <br>
-        <br>
-        <label for="areaadministrativa">Área administrativa </label>
-        <select id="areaadministrativa" name="areaadministrativa" required>
-            <!-- Las opciones serán generadas dinámicamente por JavaScript -->
-            
-        </select>
-        <br>
-        <br>
-        <label for="numeroexpedinete">Número de expediente:</label>
-        <input type="number" id="numeroexpedinete" name="numeroexpedinete" min="1" max="999" required/>
-        <br>
-        <br>
-        <label for="anoexpediente">Año del  expediente:</label>
-        <input type="number" id="anoexpediente" name="anoexpediente" min="2000" max="2024" required/>
-        <br>
-        <br>
-
-        <label>Seleccione el archivo a subir:</label>
-        
-
-        <input type="file" name="archivo" accept="application/pdf">
-        <br>
-        <br>
-        <input type="submit" value="Enviar">
-    </form>
-</div>
 
 <footer>
-    <p>Elaborado por Jesús Arturo cisneros</p>
+    <p>Elaborado por Jesús Arturo cisneros para PROFEDET</p>
 </footer>
+</center>
 </body>
 
 </html>
