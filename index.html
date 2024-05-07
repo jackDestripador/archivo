@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es_mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivo</title>
+</head>
+<script>
+    function mostrarOpciones() {
+        var seleccion = document.getElementById("unidadadministartiva").value;
+        var opciones = document.getElementById("areaadministrativa");
+        // Limpiar las opciones existentes
+        opciones.innerHTML = '';
+
+        // Mostrar opciones según la selección
+        if (seleccion === "DAM") {
+            opciones.innerHTML += '<option value="SAS" > Subdirección de Asesoría </option>';
+        } else if (seleccion === "DRJ") {
+            opciones.innerHTML += '<option value="SRJ" > Subdirección de Representación Jurídica </option>';
+            opciones.innerHTML += '<option value="SAM">Subdirección de Amparos </option>';
+        }
+        else if (seleccion === "DZN") {
+            opciones.innerHTML += '<option value="CHI">Procuraduría Foránea en Chihuahua</option>';
+            opciones.innerHTML += '<option value="CDJ">Procuraduría Foránea en Ciudad Juarez</option>';
+            opciones.innerHTML += '<option value="CDV">Procuraduría Foránea en Ciudad Victoria </option>';
+            opciones.innerHTML += '<option value="CUL">Procuraduría Foránea en Culiacán </option>';
+            opciones.innerHTML += '<option value="DGO">Procuraduría Foránea en Durango </option>';
+            opciones.innerHTML += '<option value="ENS">Procuraduría Foránea en Ensenada</option>';
+            opciones.innerHTML += '<option value="GYS">Procuraduría Foránea en Guaymas</option>';
+            opciones.innerHTML += '<option value="HMO"> Procuraduría Foránea en Hermosillo </option>';
+            opciones.innerHTML += '<option value="PAR">Procuraduría Foránea en Hidalgo de Parral</option>';
+            opciones.innerHTML += '<option value="PAZ">Procuraduría Foránea en La Paz </option>';
+            opciones.innerHTML += '<option value="MZN">Procuraduría Foránea en Mazatlán</option>';
+            opciones.innerHTML += '<option value="MXL">Procuraduría Foránea en Mexicali</option>';
+            opciones.innerHTML += '<option value="NLE">Procuraduría Foránea en Nuevo León </option>';
+            opciones.innerHTML += '<option value="REY">Procuraduría Foránea en Reynosa</option>';
+            opciones.innerHTML += '<option value="SAL">Procuraduría Foránea en Saltillo</option>';
+            opciones.innerHTML += '<option value="TMP">Procuraduría Foránea en Tampico</option>';
+            opciones.innerHTML += '<option value="TIJ">Procuraduría Foránea en Tijuana</option>';
+            opciones.innerHTML += '<option value="TOR">Procuraduría Foránea en Torreón</option>';
+        }
+        else if (seleccion === "DZC") {
+            opciones.innerHTML += '<option value="AGS">Procuraduría Foránea en Aguascalientes </option>';
+            opciones.innerHTML += '<option value="COL">Procuraduría Foránea en Colima </option>';
+            opciones.innerHTML += '<option value="GDL">Procuraduría Foránea en Guadalajara</option>';
+            opciones.innerHTML += '<option value="GTO">Procuraduría Foránea en Guanajuato</option>';
+            opciones.innerHTML += '<option value="MOR">Procuraduría Foránea en Morelia</option>';
+            opciones.innerHTML += '<option value="PAC">Procuraduría Foránea en Pachuca</option>';
+            opciones.innerHTML += '<option value="PUE">Procuraduría Foránea en Puebla</option>';
+            opciones.innerHTML += '<option value="QRO">Procuraduría Foránea en Querétaro</option>';
+            opciones.innerHTML += '<option value="SLP">Procuraduría Foránea en San Luis Potosí</option>';
+            opciones.innerHTML += '<option value="TEP">Procuraduría Foránea en Tepic</option>';
+            opciones.innerHTML += '<option value="TLA">Procuraduría Foránea en Tlaxcala/option>';
+            opciones.innerHTML += '<option value="TOL">Procuraduría Foránea en Toluca </option>';
+            opciones.innerHTML += '<option value="ZAC">Procuraduría Foránea en Zacatecas</option>';
+
+        }
+        else if (seleccion === "DZS") {
+            opciones.innerHTML += '<option value="ACP">Procuraduría Foránea en Acapulco</option>';
+            opciones.innerHTML += '<option value="CAM">Procuraduría Foránea en Campeche </option>';
+            opciones.innerHTML += '<option value="CUN">Procuraduría Foránea en Cancún </option>';
+            opciones.innerHTML += '<option value="CTM">Procuraduría Foránea en Chetumal </option>';
+            opciones.innerHTML += '<option value="CTZ">Procuraduría Foránea en Ciudad del Carmen</option>';
+            opciones.innerHTML += '<option value="CVA">Procuraduría Foránea en Coatzacoalcos </option>';
+            opciones.innerHTML += '<option value="MER">Procuraduría Foránea en Cuernavaca</option>';
+            opciones.innerHTML += '<option value="OAX">Procuraduría Foránea en Mérida</option>';
+            opciones.innerHTML += '<option value="ORI">Procuraduría Foránea en Oaxaca</option>';
+            opciones.innerHTML += '<option value="POZ">Procuraduría Foránea en Poza Rica</option>';
+            opciones.innerHTML += '<option value="TGZ">Procuraduría Foránea en Tuxtla Gutiérrez</option>';
+            opciones.innerHTML += '<option value="VER">Procuraduría Foránea en Veracruz</option>';
+            opciones.innerHTML += '<option value="VSA">Procuraduría Foránea en Villahermosa</option>';
+            opciones.innerHTML += '<option value="XAL">Procuraduría Foránea en Xalapa</option>';
+
+        }
+
+    }
+</script>
+
+<body>
+    <div>
+
+  
+    <h1>sistema de archivo</h1>
+    <form action="datos.php" method="POST" enctype="multipart/form-data">
+
+        <label> Unidad administrativa</label>
+        <select id="unidadadministartiva" name="unidadadministartiva" onchange="mostrarOpciones()" required>
+            <option value="DAM"> Dirección de Asesoría y Mediación</option>
+            <option value="DRJ"> Dirección de Representación Jurídica</option>
+            <option value="DZN"> Dirección de Control de Procesos Zona Norte</option>
+            <option value="DZC"> Dirección de Control de Procesos Zona Centro </option>
+            <option value="DZS">Dirección de Control de Procesos Zona Sur </option>
+        </select>
+        <br>
+        <br>
+        <label for="areaadministrativa">Área administrativa </label>
+        <select id="areaadministrativa" name="areaadministrativa" required>
+            <!-- Las opciones serán generadas dinámicamente por JavaScript -->
+            
+        </select>
+        <br>
+        <br>
+        <label for="numeroexpedinete">Número de expediente:</label>
+        <input type="number" id="numeroexpedinete" name="numeroexpedinete" min="1" max="999" required/>
+        <br>
+        <br>
+        <label for="anoexpediente">Año del  expediente:</label>
+        <input type="number" id="anoexpediente" name="anoexpediente" min="2000" max="2024" required/>
+        <br>
+        <br>
+
+        <label>Seleccione el archivo a subir:</label>
+        
+
+        <input type="file" name="archivo" accept="application/pdf">
+        <br>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+
+<footer>
+    <p>Elaborado por Jesús Arturo cisneros</p>
+</footer>
+</body>
+
+</html>

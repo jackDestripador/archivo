@@ -21,8 +21,10 @@
         <label>  Unidad administrativa</label>
             <select id="unidadadministartiva" name="unidadadministartiva" >
                 <option value="DAM"> Dirección de Asesoría y Mediación</option>
-                <option value="DRJ">Dirección de Representación Jurídica</option>
-
+                <option value="DRJ"> Dirección de Representación Jurídica</option>
+                <option value="DZN"> Dirección de Control de Procesos Zona Norte</option>
+                <option value="DZC"> Dirección de Control de Procesos Zona Centro </option>
+                <option value="DZS">Dirección de Control de Procesos Zona Sur </option>
             </select>
             <br>
             <br>

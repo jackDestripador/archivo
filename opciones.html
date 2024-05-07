@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario con opciones dinámicas</title>
+<script>
+    function mostrarOpciones() {
+        var seleccion = document.getElementById("seleccion").value;
+        var opciones = document.getElementById("opciones");
+
+        // Limpiar las opciones existentes
+        opciones.innerHTML = '';
+
+        // Mostrar opciones según la selección
+        if (seleccion === "opcion1") {
+            opciones.innerHTML += '<option value="opcion1-1">Opción 1 - 1</option>';
+            opciones.innerHTML += '<option value="opcion1-2">Opción 1 - 2</option>';
+        } else if (seleccion === "opcion2") {
+            opciones.innerHTML += '<option value="opcion2-1">Opción 2 - 1</option>';
+            opciones.innerHTML += '<option value="opcion2-2">Opción 2 - 2</option>';
+        } else if (seleccion === "opcion3") {
+            opciones.innerHTML += '<option value="opcion3-1">Opción 3 - 1</option>';
+            opciones.innerHTML += '<option value="opcion3-2">Opción 3 - 2</option>';
+        }
+    }
+</script>
+</head>
+<body>
+    <form>
+        <label for="seleccion">Selecciona una opción:</label>
+        <select id="seleccion" onchange="mostrarOpciones()">
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+            <option value="opcion3">Opción 3</option>
+        </select>
+        <br>
+        <label for="opciones">Elige una de las opciones disponibles:</label>
+        <select id="opciones">
+            <!-- Las opciones serán generadas dinámicamente por JavaScript -->
+        </select>
+    </form>
+</body>
+</html>
