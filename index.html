@@ -107,15 +107,36 @@
             <input type="number" id="numeroexpedinete" name="numeroexpedinete" min="1" max="999" required />
             <br>
             <br>
-            <label for="anoexpediente">Año del expediente:</label>
-            <input type="number" id="anoexpediente" name="anoexpediente" min="2000" max="2024" required />
+            <label for="ae">Año de apertura del expediente </label>
+            <input type="number" id="ae" name="ae" min="1990" max="2024" required />
             <br>
             <br>
-
+            <label for="ac">Año de cierre del expediente </label>
+            <input type="number" id="ac" name="ac" min="2015" max="2024" required />
+            <br>
+            <br>
+            <label for="fojas">Número de fojas </label>
+            <input type="number" id="fojas" name="fojas" min="1" max="1000" required />
+            <br>
+            <br>
+            <cebter><p>Datos del trabajador (usuario)</p></cebter>
+            <label for="name">Nombre  </label>
+            <input type="text" id="name" minlength="1" maxlength="60" size="12" />
+            
+            
+            <br>
+            <br>
+            <label for="lastname">Apellido Paterno  </label>
+            <input type="text" id="lastname" name="lastname"  minlength="1" maxlength="60" size="12" />
+            <br>
+            <br>
+            <label for="mothername">Apellido Materno   </label>
+            <input type="text" id="mothername" name="mothername"  minlength="1" maxlength="60" size="12" />
+            <br>
+            <br>
             <label>Seleccione el archivo a subir:</label>
-
-
-            <input type="file" name="archivo" accept="application/pdf">
+    
+            <input type="file" name="archivo" accept="application/pdf" required>
             <br>
             <br>
             <input type="submit" value="Enviar">
@@ -124,7 +145,7 @@
   
 
 <footer>
-    <p>Elaborado por Jesús Arturo cisneros para PROFEDET</p>
+    <p>Elaborado por Jesús Arturo Cisneros  Cantero para PROFEDET ext 44562</p>
 </footer>
 </center>
 </body>
